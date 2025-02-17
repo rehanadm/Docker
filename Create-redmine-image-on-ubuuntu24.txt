@@ -1,0 +1,8 @@
+# Pull ubuntu:24.04 Image from dockerhub
+docker pull ubuntu:24.04
+# running the docker image in detached mode
+docker run -d -it --name ubuntu-redmine ubuntu:24.04 /bin/bash
+# switch to docker container 
+docker exec -it <Container-ID> /bin/bash
+# update the repository and upgrade the packages
+apt update -y && apt upgrade -y
